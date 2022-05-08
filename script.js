@@ -31,13 +31,37 @@ function resetGrid(){
     }
 }
 
+function gridSize(){
+    
+    const divs = document.querySelectorAll('.etch');
+    for(let i = 0; i<divs.length; i++){
+        
+        container.removeChild(divs[i]);
+    }
+    
+    
+}
+
 
 resetBtn.addEventListener('click',()=>{
     resetGrid();
 })
 
+gridBtn.addEventListener('click', ()=>{
+    let input = parseInt(prompt('Enter a number', '0'));
+    if (input>100){
+        input = parseInt(prompt('Enter a number less than or equal to 100'));
+    }
+    gridSize();
+    createGrid(input);
+    etchASketch();
+
+
+})
+
 createGrid(16);
 etchASketch();
+
 
 
 

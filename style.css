@@ -5,6 +5,7 @@
 }
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -16,6 +17,7 @@ body{
     height: 500px;
     width: 500px;
 }
+
 
 .grid, .reset{
     margin: 5px;
